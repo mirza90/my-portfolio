@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Ubuntu:wght@500&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+  max-width: 1280px;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#header {
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#header a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-family: "Ubuntu";
+}
+
+#header a:hover {
+  background-color: #515968;
+  height: 100%;
+}
+
+#home {
+  font-size: 30px;
+  margin-right: auto;
+  font-family: "Quicksand";
+}
+
+@media screen and (max-width: 720px) {
+  #header {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
+    font-size: 14px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #header a {
+    place-self: center;
+  }
+
+  #home {
+    grid-column: 1/6;
+    grid-row: 1;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
