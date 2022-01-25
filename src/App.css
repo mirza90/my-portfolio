@@ -23,6 +23,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
+  height: 12vh;
+  background-color: #282c34;
 }
 
 #header a {
@@ -44,11 +47,35 @@ body {
   font-family: "Quicksand";
 }
 
+.main-container {
+  margin-top: 12vh;
+}
+
+.single-page {
+  height: 88vh;
+  scroll-margin-top: 12vh;
+  width: 100vw;
+}
+
+.about-page {
+  background-color: red;
+}
+
+.projects-page {
+  background-color: green;
+}
+
+.blog-page {
+  background-color: yellow;
+}
+
+
 @media screen and (max-width: 720px) {
   #header {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
     font-size: 14px;
+    height: 25vh;
   }
 
   #header a {
@@ -61,4 +88,13 @@ body {
     margin-right: auto;
     margin-left: auto;
   }
+
+  .main-container {
+    margin-top:25vh;
+  }
+
+  .single-page {
+    height: 75vh;
+    scroll-margin-top: 25vh;
+    }
 }
