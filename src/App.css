@@ -36,9 +36,9 @@ body {
   font-family: "Ubuntu";
 }
 
+
 #header a:hover {
   background-color: #515968;
-  height: 100%;
 }
 
 #home {
@@ -47,23 +47,42 @@ body {
   font-family: "Quicksand";
 }
 
-.main-container {
-  margin-top: 12vh;
-}
-
-.single-page {
-  height: 88vh;
-  scroll-margin-top: 12vh;
-  width: 100vw;
-}
-
 .about-page {
+  width: 60%;
+  height: 60%;
+  margin-bottom: 30%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: tan;
 }
 
 .projects-page {
 }
 
 .blog-page {
+  width: 60%;
+  height: 60%;
+  margin-bottom: 30%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: azure;
+}
+
+.section-content {
+  padding-top: 12vh;
+  height: 98vh;
+}
+
+.project {
+  width: 60%;
+  height: 60%;
+  margin-bottom: 30%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: thistle;
 }
 
 
@@ -86,12 +105,14 @@ body {
     margin-left: auto;
   }
 
-  .main-container {
-    margin-top:25vh;
+  .project {
+    width: 100%;
+    height: 100%;
   }
 
-  .single-page {
-    height: 75vh;
-    scroll-margin-top: 25vh;
-    }
+  
+.section-content {
+  padding-top: 25vh;
+  height: 98vh;
+}
 }

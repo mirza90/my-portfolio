@@ -1,15 +1,13 @@
 import './App.css';
 import {Header} from "./components/Header"
+import ReactFullpage from '@fullpage/react-fullpage';
+import {FullPage} from "./components/FullPage"
 
 function App() {
   return (
     <div>
     <Header />
-    <div className="main-container">
-      <div className="single-page about-page" id="about">ABOUT</div>
-      <div className="single-page projects-page" id="projects">PROJECTS</div>
-      <div className="single-page blog-page" id="blog">BLOG</div>
-    </div>
+     <FullPage />
   </div>
   );
 }
