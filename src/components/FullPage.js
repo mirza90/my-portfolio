@@ -11,27 +11,31 @@ export const FullPage = () => (
         <ReactFullpage.Wrapper id="fullpage">
           <div className="section single-page">
             <div className="section-content">
-              <div className="about-page">About</div>
+              <div className="about-page section-card">About</div>
             </div>
           </div>
-          <div className="section single-page projects-page">
+          <div className="section single-page">
             <div className="section-content">
-              <div className="slide">
-                <div className="project">Projects</div>
-              </div>
-              <div className="slide">
-                <div className="project">First Project</div>
-              </div>
-              <div className="slide">
-                <div className="project">Second Project</div>
-              </div>
-              <div className="slide">
-                <div className="project">Third Project</div>
+              <div className="section-card">
+                <div className="slide">
+                  <div className="project">Projects</div>
+                </div>
+                <div className="slide">
+                  <div className="project">First Project</div>
+                </div>
+                <div className="slide">
+                  <div className="project">Second Project</div>
+                </div>
+                <div className="slide">
+                  <div className="project">Third Project</div>
+                </div>
               </div>
             </div>
           </div>
           <div className="section single-page">
-            <div className="section-content"><div className="blog-page">Blog</div></div>
+            <div className="section-content">
+              <div className="blog-page section-card">Blog</div>
+            </div>
           </div>
         </ReactFullpage.Wrapper>
       );

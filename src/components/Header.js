@@ -3,7 +3,6 @@ import {BsLinkedin, BsGithub} from "react-icons/bs";
 export const Header = () => {
     return (
         <div id="header">
-
             <a id="home" href="#about">MirzaDoesCode</a>
             <a href="#projects">Projects</a>
             <a href="#blog">Blog</a>
