@@ -1,25 +1,20 @@
 import { useState } from "react";
+import { ProjectButton } from "./ProjectButton";
 
 export const ProjectCard = ({ project }) => {
   const projectStyle = {
-    backgroundImage: "url('/beat_machine.png')",
+    backgroundImage: `url(${project.backgroundImage})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
 
-  const content =
-    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+  const content = project.description
 
   const [showDescription, setShowDescription] = useState(false);
 
   const toggleShowDescription = () => {
     setShowDescription(!showDescription);
-  };
-
-  const test = (e) => {
-    e.stopPropagation();
-    console.log(e);
   };
 
   return (
@@ -39,10 +34,8 @@ export const ProjectCard = ({ project }) => {
         <div className="project-title-container">
           <div className="project-title">{project.title}</div>
           <div className="project-buttons">
-            <div className="project-button" onClick={test}>
-              Code
-            </div>
-            <div className="project-button">Demo</div>
+              <ProjectButton link={project.linkToCode} text="Code" />
+              <ProjectButton link={project.linkToDemo} text="Demo" />
           </div>
         </div>
       </div>
