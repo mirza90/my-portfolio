@@ -37,10 +37,6 @@ body {
   font-family: "Ubuntu";
 }
 
-#header a:hover {
-  background-color: #515968;
-}
-
 #home {
   font-size: 30px;
   margin-right: auto;
@@ -55,7 +51,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0px 0px 3px white;
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .fp-table {
@@ -78,13 +74,18 @@ body {
   justify-content: flex-end;
 }
 
-.project-title {
+.project-title-container {
   margin-top: auto;
   width: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-title {
   font-size: 36px;
-  line-height: 100%;
 }
 
 .project-description-container {
@@ -93,13 +94,26 @@ body {
   position: relative;
 }
 
+.project-buttons {
+  justify-self: end;
+  display: flex;
+  gap: 10px;
+}
+
+.project-button {
+  padding: 0 6px 0 6px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
 .project-description-active {
   position: absolute;
+  padding: 10px;
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: rgba(0,0,0,0.5);
-  transition: all 1s;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 1s, padding 1ms;
 }
 
 .project-description-inactive {
@@ -122,9 +136,9 @@ body {
 
 .fp-slidesNav {
   left: 50% !important;
-  transform: translate(-54px,0);
+  transform: translate(-54px, 0);
   bottom: 5% !important;
-  }
+}
 
 @media screen and (max-width: 720px) {
   #header {
@@ -171,7 +185,6 @@ body {
     height: 100%;
   }
 
-
   .section-content {
     padding-top: 25vh;
     height: 98vh;
@@ -185,11 +198,25 @@ body {
     box-shadow: none;
   }
 
+  .project-title-container {
+    line-height: 32px;
+  }
+
   .project-title {
     font-size: 24px;
   }
 
   .section-card-with-slides {
     height: 70% !important;
+  }
+}
+
+@media (hover: hover) {
+  #header a:hover {
+    background-color: #515968;
+  }
+
+  .project-button:hover {
+    background-color: #515968;
   }
 }

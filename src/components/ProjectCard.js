@@ -14,8 +14,12 @@ export const ProjectCard = ({ project }) => {
   const [showDescription, setShowDescription] = useState(false);
 
   const toggleShowDescription = () => {
-    console.log(showDescription);
     setShowDescription(!showDescription);
+  };
+
+  const test = (e) => {
+    e.stopPropagation();
+    console.log(e);
   };
 
   return (
@@ -32,7 +36,15 @@ export const ProjectCard = ({ project }) => {
             {showDescription ? content : ""}
           </div>
         </div>
-        <div className="project-title">{project.title}</div>
+        <div className="project-title-container">
+          <div className="project-title">{project.title}</div>
+          <div className="project-buttons">
+            <div className="project-button" onClick={test}>
+              Code
+            </div>
+            <div className="project-button">Demo</div>
+          </div>
+        </div>
       </div>
     </div>
   );
