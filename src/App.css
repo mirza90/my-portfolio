@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Ubuntu:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Ubuntu:wght@500&display=swap");
 
 body {
   background-color: #282c34;
   color: white;
+  font-family: "Ubuntu";
 }
 
 .App {
@@ -36,7 +37,6 @@ body {
   font-family: "Ubuntu";
 }
 
-
 #header a:hover {
   background-color: #515968;
 }
@@ -47,7 +47,6 @@ body {
   font-family: "Quicksand";
 }
 
-
 .section-card {
   width: 60%;
   height: 60%;
@@ -55,11 +54,59 @@ body {
   margin-top: 8%;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0px 0px 10px white;
+  box-shadow: 0px 0px 3px white;
+  background-color: rgba(255,255,255,0.05);
+}
+
+.fp-table {
+  height: unset !important;
+}
+
+.fp-tableCell {
+  height: unset !important;
+}
+
+.fp-slide {
+  height: 100% !important;
 }
 
 .project {
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-title {
+  margin-top: auto;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.project-description-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.project-description-active {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0,0,0,0.5);
+  transition: all 1s;
+}
+
+.project-description-inactive {
+  position: absolute;
+  transition: all 1s;
+  top: 100%;
+  height: 0;
   width: 100%;
 }
 
@@ -68,8 +115,16 @@ body {
   height: 98vh;
 }
 
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white !important;
+}
 
-
+.fp-slidesNav {
+  left: 50% !important;
+  transform: translate(-54px,0);
+  bottom: 5% !important;
+  }
 
 @media screen and (max-width: 720px) {
   #header {
@@ -77,6 +132,27 @@ body {
     grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
     font-size: 14px;
     height: 25vh;
+  }
+
+  /* left-slider-arrow */
+  .fp-controlArrow.fp-prev {
+    border: none;
+    width: 50px;
+    height: 101px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* right-slider-arrow */
+  .fp-controlArrow.fp-next {
+    border: none;
+    width: 50px;
+    height: 101px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #header a {
@@ -95,17 +171,25 @@ body {
     height: 100%;
   }
 
-  
-.section-content {
-  padding-top: 25vh;
-  height: 98vh;
-}
 
-.section-card {
-  width: 90%;
-  height: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: none;
-}
+  .section-content {
+    padding-top: 25vh;
+    height: 98vh;
+  }
+
+  .section-card {
+    width: 90%;
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none;
+  }
+
+  .project-title {
+    font-size: 24px;
+  }
+
+  .section-card-with-slides {
+    height: 70% !important;
+  }
 }

@@ -1,11 +1,19 @@
 import ReactFullpage from "@fullpage/react-fullpage";
+import { ProjectCard } from "./ProjectCard";
 
+const projects = [
+  { title: "Projects" },
+  { title: "First Project" },
+  { title: "Second Project" },
+  { title: "Third Project" },
+];
 export const FullPage = () => (
   <ReactFullpage
     //fullpage options
     licenseKey={"F4962CFF-16A64BB3-82466A45-9D19B396"}
     scrollingSpeed={1000} /* Options here */
     anchors={["about", "projects", "blog"]}
+    slidesNavigation={true}
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper id="fullpage">
@@ -16,19 +24,10 @@ export const FullPage = () => (
           </div>
           <div className="section single-page">
             <div className="section-content">
-              <div className="section-card">
-                <div className="slide">
-                  <div className="project">Projects</div>
-                </div>
-                <div className="slide">
-                  <div className="project">First Project</div>
-                </div>
-                <div className="slide">
-                  <div className="project">Second Project</div>
-                </div>
-                <div className="slide">
-                  <div className="project">Third Project</div>
-                </div>
+              <div className="section-card section-card-with-slides">
+                {projects.map((project, index) => (
+                  <ProjectCard project={project} key={index} />
+                ))}
               </div>
             </div>
           </div>
