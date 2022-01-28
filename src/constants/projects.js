@@ -4,8 +4,9 @@ module.exports = {
     {
       title: "First Project",
       backgroundImage: "/beat_machine.png",
-      linkToCode: "https://www.google.com",
-      linkToDemo: "https://www.google.com",
+    //   linkToCode: "https://www.google.com",
+    //   linkToDemo: "https://www.google.com",
+      linkToCodepen: "https://www.google.com",
       description:
         "Some Project,Some Project,Some Project,Some Project,Some Project,Some Project,Some Project,Some Project,Some Project,Some Project,Some Project,Some Project,Some Project,",
     },

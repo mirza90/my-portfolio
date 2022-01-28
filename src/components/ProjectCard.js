@@ -9,7 +9,7 @@ export const ProjectCard = ({ project }) => {
     backgroundRepeat: "no-repeat",
   };
 
-  const content = project.description
+  const content = project.description;
 
   const [showDescription, setShowDescription] = useState(false);
 
@@ -34,8 +34,9 @@ export const ProjectCard = ({ project }) => {
         <div className="project-title-container">
           <div className="project-title">{project.title}</div>
           <div className="project-buttons">
-              <ProjectButton link={project.linkToCode} text="Code" />
-              <ProjectButton link={project.linkToDemo} text="Demo" />
+            <ProjectButton link={project.linkToCode} text="Code" />
+            <ProjectButton link={project.linkToDemo} text="Demo" />
+            <ProjectButton link={project.linkToCodepen} text="Code + Demo" />
           </div>
         </div>
       </div>

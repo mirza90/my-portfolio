@@ -1,12 +1,15 @@
 import ReactFullpage from "@fullpage/react-fullpage";
 import { ProjectCard } from "./ProjectCard";
 import { projects } from "../constants/projects";
+import { ProfessionalCareerSlide } from "./ProfessionalCareerSlide";
+import { AcademicCareerSlide } from "./AcademicCareerSlide";
+import {TechnologiesSlide} from "./TechologiesSlide"
 
 export const FullPage = () => (
   <ReactFullpage
     //fullpage options
     licenseKey={"F4962CFF-16A64BB3-82466A45-9D19B396"}
-    scrollingSpeed={1000} /* Options here */
+    scrollingSpeed={500} /* Options here */
     anchors={["about", "projects", "cv"]}
     slidesNavigation={true}
     render={({ state, fullpageApi }) => {
@@ -17,6 +20,7 @@ export const FullPage = () => (
               <div className="about-page section-card">About</div>
             </div>
           </div>
+
           <div className="section single-page">
             <div className="section-content">
               <div className="section-card section-card-with-slides">
@@ -26,9 +30,14 @@ export const FullPage = () => (
               </div>
             </div>
           </div>
+
           <div className="section single-page">
             <div className="section-content">
-              <div className="section-card">CV</div>
+              <div className="section-card section-card-with-slides">
+                <ProfessionalCareerSlide />
+                <AcademicCareerSlide />
+                <TechnologiesSlide />
+              </div>
             </div>
           </div>
         </ReactFullpage.Wrapper>
