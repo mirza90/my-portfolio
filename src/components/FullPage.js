@@ -4,6 +4,7 @@ import { projects } from "../constants/projects";
 import { ProfessionalCareerSlide } from "./ProfessionalCareerSlide";
 import { AcademicCareerSlide } from "./AcademicCareerSlide";
 import {TechnologiesSlide} from "./TechologiesSlide"
+import { AboutMePage } from "./AboutMePage";
 
 export const FullPage = () => (
   <ReactFullpage
@@ -17,7 +18,7 @@ export const FullPage = () => (
         <ReactFullpage.Wrapper id="fullpage">
           <div className="section single-page">
             <div className="section-content">
-              <div className="about-page section-card">About</div>
+              <AboutMePage />
             </div>
           </div>
 

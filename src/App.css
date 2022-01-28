@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Ubuntu:ital,wght@0,300;0,500;1,300&display=swap");
 
-body {
+body, html {
   background-color: #282c34;
   color: white;
   font-family: "Ubuntu";
+  overflow: hidden;
 }
 
 .App {
@@ -13,6 +14,10 @@ body {
   max-width: 1280px;
   margin: auto;
 }
+
+.about-description em {
+  font-weight: 500;
+  font-style: normal;}
 
 #header {
   display: flex;
@@ -54,8 +59,28 @@ body {
   margin-top: 8%;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0px 0px 3px white;
-  background-color: rgba(255, 255, 255, 0.05);
+  /* border: 1px solid white; */
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: left;
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.about-description {
+  width: 60%;
+  align-self: center;
+  text-align: left;
+  padding-top: 60px;
+  font-weight: 300;
 }
 
 .fp-table {
@@ -192,9 +217,16 @@ body {
   box-shadow: 0 0 2px white;
   border-radius: 4px;
   text-align: center;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px 0px 20px 0px;
 }
+
+.technologies-icon {
+  font-size: 40px;
+}
+
 
 @media screen and (max-width: 720px) {
   #header {

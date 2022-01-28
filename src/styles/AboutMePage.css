@@ -1,0 +1,61 @@
+.first-section {
+  opacity: 0;
+  margin-left: 100%;
+  width: 300%;
+  animation: slideIn 3s ease-in 0s forwards;
+}
+
+.second-section {
+  opacity: 0;
+  margin-left: 100%;
+  width: 300%;
+  animation: slideIn 3s ease-in 2s forwards;
+  font-size: 200%;
+  margin: 50px 0 50px 0;
+}
+
+.third-section {
+  opacity: 0;
+  margin-left: 100%;
+  width: 300%;
+  animation: slideIn 3s ease-in 4s forwards;
+
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.fourth-section {
+  opacity: 0;
+  margin-left: 100%;
+  width: 300%;
+  animation: slideIn 3s ease-in 6s forwards;
+
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.fifth-section {
+  opacity: 0;
+  margin-left: 100%;
+  width: 300%;
+  animation: slideIn 3s ease-in 8s forwards;
+  font-weight: 300;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  85% {
+    margin-left: -2%;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0%;
+    width: 100%;
+  }
+}

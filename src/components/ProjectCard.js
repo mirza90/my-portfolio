@@ -11,7 +11,7 @@ export const ProjectCard = ({ project }) => {
 
   const content = project.description;
 
-  const [showDescription, setShowDescription] = useState(false);
+  const [showDescription, setShowDescription] = useState(project.descriptionIsOpen || false);
 
   const toggleShowDescription = () => {
     setShowDescription(!showDescription);

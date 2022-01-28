@@ -8,12 +8,12 @@ export const TechnologiesSlide = () => {
       <div className="professional-career">
         <div className="professional-career-header">Technologies</div>
         <div className="technologies-grid">
-            <div className="technologies-entry" ><h2><FaReact /></h2></div>
-            <div className="technologies-entry"><h2><FaPython /></h2></div>
-            <div className="technologies-entry"><h2><SiJavascript /></h2></div>
-            <div className="technologies-entry"><h2><SiCplusplus /></h2></div>
-            <div className="technologies-entry"><h2><SiTensorflow /></h2></div>
-            <div className="technologies-entry"><h2><DiNodejs /></h2></div>
+            <div className="technologies-entry"><div className="technologies-icon"><FaReact /></div><div>React</div></div>
+            <div className="technologies-entry"><div className="technologies-icon"><FaPython /></div><div>Python</div></div>
+            <div className="technologies-entry"><div className="technologies-icon"><SiJavascript /></div><div>JavaScript</div></div>
+            <div className="technologies-entry"><div className="technologies-icon"><SiCplusplus /></div><div>C++</div></div>
+            <div className="technologies-entry"><div className="technologies-icon"><SiTensorflow /></div><div>Tensorflow</div></div>
+            <div className="technologies-entry"><div className="technologies-icon"><DiNodejs /></div><div>Node</div></div>
         </div>
       </div>
     </div>
